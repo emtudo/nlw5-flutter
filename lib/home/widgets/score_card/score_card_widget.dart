@@ -17,11 +17,15 @@ class ScoreCardWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [BoxShadow(color: AppColors.lightGrey, blurRadius: 5)]),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(child: ChartWidget()),
+              Expanded(
+                flex: 1,
+                child: ChartWidget(),
+              ),
               Expanded(
                 flex: 3,
                 child: Padding(
