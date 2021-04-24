@@ -20,9 +20,9 @@ class HomeController {
 
     if (state == HomeState.success) {
       state = HomeState.completed;
-    } else {
-      state = HomeState.success;
+      return;
     }
+    state = HomeState.success;
   }
 
   void getQuizzes() async {
@@ -30,8 +30,8 @@ class HomeController {
     quizzes = await repository.getQuizzes();
     if (state == HomeState.success) {
       state = HomeState.completed;
-    } else {
-      state = HomeState.success;
+      return;
     }
+    state = HomeState.success;
   }
 }

@@ -1,3 +1,4 @@
+import 'package:dev_quiz/challenge/challenge_page.dart';
 import 'package:dev_quiz/core/app_colors.dart';
 
 import 'home_controller.dart';
@@ -37,11 +38,11 @@ class _HomePageState extends State<HomePage> {
           user: controller.user!,
         ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -70,11 +71,16 @@ class _HomePageState extends State<HomePage> {
                   mainAxisSpacing: 16,
                   children: controller.quizzes!
                       .map((e) => QuizCardWidget(
-                            title: e.title,
-                            percent: e.questionAnswered / e.questions.length,
-                            completed:
-                                "${e.questionAnswered}/${e.questions.length}",
-                          ))
+                          title: e.title,
+                          percent: e.questionAnswered / e.questions.length,
+                          completed:
+                              "${e.questionAnswered}/${e.questions.length}",
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChallengePage()));
+                          }))
                       .toList(),
                 ),
               ),
