@@ -1,5 +1,5 @@
 import 'package:dev_quiz/challenge/challenge_controller.dart';
-import 'package:dev_quiz/challenge/widgets/prev_next_button/prev_next_button_widget.dart';
+import 'package:dev_quiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:dev_quiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:dev_quiz/challenge/widgets/quiz/quiz_widget.dart';
 import 'package:dev_quiz/shared/models/question_model.dart';
@@ -80,7 +80,7 @@ class _ChallengePageState extends State<ChallengePage> {
                     children: [
                       if (value < widget.questions.length - 1)
                         Expanded(
-                            child: PrevNextButtonWidget.white(
+                            child: NextButtonWidget.white(
                           label: "Pular",
                           onTap: () {
                             nextPage();
@@ -88,7 +88,7 @@ class _ChallengePageState extends State<ChallengePage> {
                         )),
                       if (value == widget.questions.length - 1)
                         Expanded(
-                            child: PrevNextButtonWidget.green(
+                            child: NextButtonWidget.green(
                           label: "Confirmar",
                           onTap: () {
                             Navigator.pop(context);

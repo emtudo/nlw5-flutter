@@ -2,14 +2,14 @@ import 'package:dev_quiz/core/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PrevNextButtonWidget extends StatelessWidget {
+class NextButtonWidget extends StatelessWidget {
   final String label;
   final Color backgroundColor;
   final Color fontColor;
   final Color borderColor;
   final VoidCallback onTap;
 
-  PrevNextButtonWidget({
+  NextButtonWidget({
     required this.label,
     required this.backgroundColor,
     required this.fontColor,
@@ -17,16 +17,14 @@ class PrevNextButtonWidget extends StatelessWidget {
     required this.onTap,
   });
 
-  PrevNextButtonWidget.green(
-      {required String label, required VoidCallback onTap})
+  NextButtonWidget.green({required String label, required VoidCallback onTap})
       : this.backgroundColor = AppColors.darkGreen,
         this.fontColor = AppColors.white,
         this.borderColor = AppColors.green,
         this.label = label,
         this.onTap = onTap;
 
-  PrevNextButtonWidget.white(
-      {required String label, required VoidCallback onTap})
+  NextButtonWidget.white({required String label, required VoidCallback onTap})
       : this.backgroundColor = AppColors.white,
         this.fontColor = AppColors.grey,
         this.borderColor = AppColors.border,

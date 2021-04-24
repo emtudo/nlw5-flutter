@@ -7,7 +7,7 @@
         "questions": [
             {
                 "title": "O que o Flutter faz em sua totalidade",
-                "awnsers": [
+                "answers": [
                     {
                         "title": "Possibilita a criação de aplicativos compilados nativamente",
                         "isRight": true
@@ -25,7 +25,7 @@
             },
             {
                 "title": "Flutter...",
-                "awnsers": [
+                "answers": [
                     {
                         "title": "Possibilita a criação de aplicativos compilados nativamente",
                         "isRight": true
@@ -43,7 +43,7 @@
             },
             {
                 "title": "Qual linguagem é utilizada no Flutter?",
-                "awnsers": [
+                "answers": [
                     {
                         "title": "JavaScript"
                     },
@@ -61,7 +61,7 @@
             },
             {
                 "title": "Na estrutura de estilo reativo do Flutter, chamar ___ aciona uma chamada ao método build () para o objeto State, resultando em uma atualização da IU.",
-                "awnsers": [
+                "answers": [
                     {
                         "title": "buildRow()"
                     },
