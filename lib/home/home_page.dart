@@ -41,6 +41,9 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Column(
             children: [
+              SizedBox(
+                height: 10,
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
@@ -79,7 +82,8 @@ class _HomePageState extends State<HomePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ChallengePage()));
+                                    builder: (context) =>
+                                        ChallengePage(questions: e.questions)));
                           }))
                       .toList(),
                 ),

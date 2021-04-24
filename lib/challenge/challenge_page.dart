@@ -1,16 +1,31 @@
+import 'package:dev_quiz/challenge/challenge_controller.dart';
 import 'package:dev_quiz/challenge/widgets/prev_next_button/prev_next_button_widget.dart';
 import 'package:dev_quiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:dev_quiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:dev_quiz/shared/models/question_model.dart';
 import 'package:flutter/material.dart';
 
 class ChallengePage extends StatefulWidget {
-  ChallengePage({Key? key}) : super(key: key);
+  final List<QuestionModel> questions;
+
+  ChallengePage({Key? key, required this.questions}) : super(key: key);
 
   @override
   _ChallengePageState createState() => _ChallengePageState();
 }
 
 class _ChallengePageState extends State<ChallengePage> {
+  final controller = ChallengeController();
+  final pageController = PageController();
+
+  @override
+  void initState() {
+    pageController.addListener(() {
+      controller.currentPage = pageController.page!.toInt();
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,13 +36,26 @@ class _ChallengePageState extends State<ChallengePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              BackButton(),
-              QuestionIndicatorWidget(),
+              IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  }),
+              ValueListenableBuilder<int>(
+                  valueListenable: controller.currentPageNotifier,
+                  builder: (context, value, _) => QuestionIndicatorWidget(
+                        currentPage: value,
+                        length: widget.questions.length,
+                      )),
             ],
           ),
         ),
       ),
-      body: QuizWidget(title: "O que o Fluter faz em sua totalidade?"),
+      body: PageView(
+        physics: NeverScrollableScrollPhysics(),
+        controller: pageController,
+        children: widget.questions.map((e) => QuizWidget(question: e)).toList(),
+      ),
       bottomNavigationBar: SafeArea(
         bottom: true,
         child: Padding(
@@ -37,7 +65,7 @@ class _ChallengePageState extends State<ChallengePage> {
             children: [
               Expanded(
                   child: PrevNextButtonWidget.white(
-                label: "Fácil",
+                label: "Pular",
                 onTap: () {},
               )),
               SizedBox(
