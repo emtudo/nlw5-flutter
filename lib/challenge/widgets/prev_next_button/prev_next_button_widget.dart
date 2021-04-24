@@ -48,7 +48,9 @@ class PrevNextButtonWidget extends StatelessWidget {
             side: MaterialStateProperty.all(
               BorderSide(color: borderColor),
             )),
-        onPressed: () {},
+        onPressed: () {
+          this.onTap();
+        },
         child: Text(label,
             style: GoogleFonts.notoSans(
               fontWeight: FontWeight.w600,

@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 
 class QuizWidget extends StatelessWidget {
   final QuestionModel question;
+  final VoidCallback onChange;
 
   const QuizWidget({
     Key? key,
     required this.question,
+    required this.onChange,
   }) : super(key: key);
 
   @override
