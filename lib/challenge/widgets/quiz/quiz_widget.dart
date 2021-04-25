@@ -41,7 +41,9 @@ class _QuizWidgetState extends State<QuizWidget> {
             AnswerWidget(
                 answer: answers(i),
                 isSelected: indexSelected == i,
+                disabled: indexSelected != -1,
                 onTap: () {
+                  widget.onChange();
                   indexSelected = i;
                   setState(() {});
                 }),
