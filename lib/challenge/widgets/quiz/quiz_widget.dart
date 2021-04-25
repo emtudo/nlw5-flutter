@@ -19,7 +19,7 @@ class QuizWidget extends StatefulWidget {
 }
 
 class _QuizWidgetState extends State<QuizWidget> {
-  int intSelected = -1;
+  int indexSelected = -1;
   AnswerModel answers(int index) => widget.question.answers[index];
 
   @override
@@ -39,8 +39,12 @@ class _QuizWidgetState extends State<QuizWidget> {
           ),
           for (var i = 0; i < widget.question.answers.length; i++)
             AnswerWidget(
-              answer: answers(i),
-            ),
+                answer: answers(i),
+                isSelected: indexSelected == i,
+                onTap: () {
+                  indexSelected = i;
+                  setState(() {});
+                }),
         ],
       ),
     );
