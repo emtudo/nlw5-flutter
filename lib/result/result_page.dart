@@ -1,9 +1,21 @@
+import 'package:flutter/material.dart';
+
 import 'package:dev_quiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:dev_quiz/core/app_images.dart';
 import 'package:dev_quiz/core/app_text_styles.dart';
-import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
+  final String title;
+  final int length;
+  final int score;
+
+  const ResultPage({
+    Key? key,
+    required this.title,
+    required this.score,
+    required this.length,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +41,11 @@ class ResultPage extends StatelessWidget {
                     text: "Você concluiu ",
                     children: [
                       TextSpan(
-                        text: "Básico de Flutter",
+                        text: "\n${title}",
                         style: AppTextStyles.bodyBold,
                       ),
                       TextSpan(
-                        text: "\ncom 6 de 10 acertos.",
+                        text: "\ncom ${score} de ${length} acertos.",
                         style: AppTextStyles.bodyBold,
                       )
                     ],
