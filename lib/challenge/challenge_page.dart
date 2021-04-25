@@ -2,6 +2,7 @@ import 'package:dev_quiz/challenge/challenge_controller.dart';
 import 'package:dev_quiz/challenge/widgets/next_button/next_button_widget.dart';
 import 'package:dev_quiz/challenge/widgets/question_indicator/question_indicator_widget.dart';
 import 'package:dev_quiz/challenge/widgets/quiz/quiz_widget.dart';
+import 'package:dev_quiz/result/result_page.dart';
 import 'package:dev_quiz/shared/models/question_model.dart';
 import 'package:flutter/material.dart';
 
@@ -89,9 +90,13 @@ class _ChallengePageState extends State<ChallengePage> {
                       if (value == widget.questions.length - 1)
                         Expanded(
                             child: NextButtonWidget.green(
-                          label: "Confirmar",
+                          label: "Finalizar",
                           onTap: () {
-                            Navigator.pop(context);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => ResultPage(),
+                                ));
                           },
                         )),
                     ],

@@ -1,6 +1,4 @@
-// import 'package:dev_quiz/challenge/challenge_page.dart';
-import 'package:dev_quiz/home/home_page.dart';
-// import 'package:dev_quiz/home/home_page.dart';
+import 'package:dev_quiz/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
 class AppWidget extends StatelessWidget {
@@ -11,7 +9,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: SplashPage(),
     );
   }
 }

@@ -1,9 +1,89 @@
 [
     {
-        "title": "Perguntas Fáceis",
+        "title": "Básico de Flutter",
         "imagem": "blocks",
         "questionAnswered": 1,
         "level": "facil",
+        "questions": [
+            {
+                "title": "Qual linguagem é utilizada no Flutter?",
+                "answers": [
+                    {
+                        "title": "JavaScript"
+                    },
+                    {
+                        "title": "GraphQL"
+                    },
+                    {
+                        "title": "Dart",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Elixir"
+                    }
+                ]
+            },
+            {
+                "title": "O que o Flutter faz em sua totalidade",
+                "answers": [
+                    {
+                        "title": "Possibilita a criação de aplicativos compilados nativamente",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Kit de desenvolvimento de interface de usuário"
+                    },
+                    {
+                        "title": "Marca de café do Himalaia"
+                    },
+                    {
+                        "title": "Possibilita a criação de desktops que são muito incríveis"
+                    }
+                ]
+            },
+            {
+                "title": "Flutter...",
+                "answers": [
+                    {
+                        "title": "Possibilita a criação de aplicativos compilados nativamente",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Kit de desenvolvimento de interface de usuário"
+                    },
+                    {
+                        "title": "Marca de café do Himalaia"
+                    },
+                    {
+                        "title": "Possibilita a criação de desktops que são muito incríveis"
+                    }
+                ]
+            },
+            {
+                "title": "Na estrutura de estilo reativo do Flutter, chamar ___ aciona uma chamada ao método build () para o objeto State, resultando em uma atualização da IU.",
+                "answers": [
+                    {
+                        "title": "buildRow()"
+                    },
+                    {
+                        "title": "onTap()"
+                    },
+                    {
+                        "title": "setState()",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Nenhuma das acima"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Básico de Elixir",
+        "imagem": "blocks",
+        "questionAnswered": 1,
+        "level": "medio",
         "questions": [
             {
                 "title": "Qual linguagem é utilizada no Flutter?",
