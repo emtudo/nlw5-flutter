@@ -6,6 +6,24 @@
         "level": "facil",
         "questions": [
             {
+                "title": "Qual linguagem é utilizada no Flutter?",
+                "answers": [
+                    {
+                        "title": "JavaScript"
+                    },
+                    {
+                        "title": "GraphQL"
+                    },
+                    {
+                        "title": "Dart",
+                        "isRight": true
+                    },
+                    {
+                        "title": "Elixir"
+                    }
+                ]
+            },
+            {
                 "title": "O que o Flutter faz em sua totalidade",
                 "answers": [
                     {
@@ -38,24 +56,6 @@
                     },
                     {
                         "title": "Possibilita a criação de desktops que são muito incríveis"
-                    }
-                ]
-            },
-            {
-                "title": "Qual linguagem é utilizada no Flutter?",
-                "answers": [
-                    {
-                        "title": "JavaScript"
-                    },
-                    {
-                        "title": "Java"
-                    },
-                    {
-                        "title": "Dart",
-                        "isRight": true
-                    },
-                    {
-                        "title": "SQL"
                     }
                 ]
             },
